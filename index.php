@@ -43,10 +43,14 @@
     </div>
     <!-- Top Bar end -->
     <div class="navbar navbar-default">
-
-        <div>
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand home" href="index.php">
+                    <img src="images/logo.jpg" alt="logo" class="hidden-xs">
+                    <img src="images/logo-small.jpg" alt="logo" class="visible-xs">
+                </a>
+            </div>
         </div>
-        
     </div>
     
 </body>
