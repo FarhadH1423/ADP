@@ -46,9 +46,66 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="index.php">
-                    <img src="images/logo.jpg" alt="logo" class="hidden-xs">
+                    <img src="images/logo.png" alt="logo" class="hidden-xs">
                     <img src="images/logo-small.jpg" alt="logo" class="visible-xs">
                 </a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+                    <span class="sr-only"></span>
+                    <i  class="fa fa-align-justify"></i>
+                </button>
+
+                <button type="button" class="navbar-toggle" data-toggle="navbar-toggle" data-target="#search">
+                    <span class="sr-only"></span>
+                    <i  class="fa fa-search"></i>
+                </button>
+            </div>
+
+            <div class="navbar-collapse collapse" id="navigation">
+                <div class="padding-nav">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li class="active">
+                            <a href="index.php">Home</a>
+                        </li>
+                        
+                        <li>
+                            <a href="shop.php">Shop</a>
+                        </li>
+
+                        <li>
+                            <a href="checkout.php">My Account</a>
+                        </li>
+
+                        <li>
+                            <a href="cart.php">Shoping Cart</a>
+                        </li>
+
+                        <li>
+                            <a href="about.php">About Us</a>
+                        </li>
+
+                        <li>
+                            <a href="services.php">Services</a>
+                        </li>
+
+                        <li>
+                            <a href="contactus.php">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                    <a href="cart.php" class="btn btn-primary navbar-btn right">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span>4 items In Cart</span>
+                    </a>
+
+
+                    <div class="navbar-collapse collapse-right">
+                        <button class="btn  navbar-btn btn-primary" type="button" data-toggle="collapse" data-target="#search">
+                        <span class="sr-only">Toggle Search</span>
+                        <i class="fa fa-search"></i>
+                        </button>
+                    
+                    </div>
+
             </div>
         </div>
     </div>
