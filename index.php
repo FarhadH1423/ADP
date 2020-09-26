@@ -54,7 +54,7 @@
                     <i  class="fa fa-align-justify"></i>
                 </button>
 
-                <button type="button" class="navbar-toggle" data-toggle="navbar-toggle" data-target="#search">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">
                     <span class="sr-only"></span>
                     <i  class="fa fa-search"></i>
                 </button>
@@ -98,17 +98,354 @@
                     </a>
 
 
-                    <div class="navbar-collapse collapse-right">
+                    <div class="navbar-collapse collapse right">
                         <button class="btn  navbar-btn btn-primary" type="button" data-toggle="collapse" data-target="#search">
                         <span class="sr-only">Toggle Search</span>
                         <i class="fa fa-search"></i>
                         </button>
                     
                     </div>
+                <div class="collapse clearfix" id="search">
+                    <form action="result.php" class="navbar-form" method="get">
+                        <div class="input-group">
+                            <input type="text" name="user_query" placeholder="search" class="form-control" required="">
+                            <span class="input-group-btn">
+                            <button type="submit" value="Search" name="search" class="btn btn-primary">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            </span> 
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="slider">
+        <div class="col-md-12">
+            <div class="carousel slide" id="myCarousel" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="myCarousel" data-slide-to="0" class="action"></li>
+                    <li data-target="myCarousel" data-slide-to="1" ></li>
+                    <li data-target="myCarousel" data-slide-to="2" ></li>
+                    <li data-target="myCarousel" data-slide-to="3" ></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="admin_area/slider_images/1.jpg" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="admin_area/slider_images/2.jpg" alt="">  
+                    </div>
+                    <div class="item">
+                        <img src="admin_area/slider_images/3.jpg" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="admin_area/slider_images/4.jpg" alt="">
+                    </div>
+                </div>
+
+               <a href="#myCarousel" class="left carousel-control" data-slide="prev">
+                   <span class="glyphicon glyphicon-chevron-left"></span>
+                   <span class="sr-only">Previous</span>
+               </a> 
+
+               <a href="#myCarousel" class="right carousel-control" data-slide="next">
+                   <span class="glyphicon glyphicon-chevron-right"></span>
+                   <span class="sr-only">Next</span>
+               </a>
+
 
             </div>
         </div>
     </div>
-    
+
+    <div id="advantage">
+        <div class="container">
+            <div class="same-height-row"> 
+                <div class="col-sm-4">
+                    <div class="box same-height">
+                        <div class="icon">
+                            <i class="fa fa-heart"></i>
+                        </div>
+                        <h3> <a href="#"> BEST PRICES </h3>
+                            <p>You can check on all others sites about the prices! Lets fo it..</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="box same-height">
+                        <div class="icon">
+                            <i class="fa fa-heart"></i>
+                        </div>
+                        <h3> <a href="#"> 100% SATISFACTION GUARANTED FROM US </h3>
+                            <p>Free returns on everything for 3months</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="box same-height">
+                        <div class="icon">
+                            <i class="fa fa-heart"></i>
+                        </div>
+                        <h3> <a href="#"> WE LOVE OUR CUSTOMERS </h3>
+                            <p>We are known to provide best possible service</p>
+                    </div>
+                </div>
+                 
+            </div>
+        </div>
+    </div>
+
+    <div id="hotbox">
+        <div class="box">
+            <div class="container">
+                <div class="col-md-12">
+                    <h2>Latest this week</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="content" class="container">
+        <div class="row">
+            <div class="col-sm-4 col-sm-6 single">
+                <div class="product">
+                    <a href="details.php">
+                        <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                    </a>
+                    <div class="text">
+                        <h3><a href="details.php">BENETTON White Polo Shirt</a></h3>
+                        <p class="price">   INR 299</p>
+                        <p class="buttons">
+                            <a href="details.php" class="btn btn-default">View Details</a>
+                            <a href="details.php" class="btn btn-primary">
+                                <i class="fa fa-shopping-cart"></i> Add to cart
+                            </a>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 col-sm-6 single">
+                <div class="product">
+                    <a href="details.php">
+                        <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                    </a>
+                    <div class="text">
+                        <h3><a href="details.php">BENETTON White Polo Shirt</a></h3>
+                        <p class="price">   INR 299</p>
+                        <p class="buttons">
+                            <a href="details.php" class="btn btn-default">View Details</a>
+                            <a href="details.php" class="btn btn-primary">
+                                <i class="fa fa-shopping-cart"></i> Add to cart
+                            </a>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 col-sm-6 single">
+                <div class="product">
+                    <a href="details.php">
+                        <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                    </a>
+                    <div class="text">
+                        <h3><a href="details.php">BENETTON White Polo Shirt</a></h3>
+                        <p class="price">   INR 299</p>
+                        <p class="buttons">
+                            <a href="details.php" class="btn btn-default">View Details</a>
+                            <a href="details.php" class="btn btn-primary">
+                                <i class="fa fa-shopping-cart"></i> Add to cart
+                            </a>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 col-sm-6 single">
+                <div class="product">
+                    <a href="details.php">
+                        <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                    </a>
+                    <div class="text">
+                        <h3><a href="details.php">BENETTON White Polo Shirt</a></h3>
+                        <p class="price">   INR 299</p>
+                        <p class="buttons">
+                            <a href="details.php" class="btn btn-default">View Details</a>
+                            <a href="details.php" class="btn btn-primary">
+                                <i class="fa fa-shopping-cart"></i> Add to cart
+                            </a>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 col-sm-6 single">
+                <div class="product">
+                    <a href="details.php">
+                        <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                    </a>
+                    <div class="text">
+                        <h3><a href="details.php">BENETTON White Polo Shirt</a></h3>
+                        <p class="price">   INR 299</p>
+                        <p class="buttons">
+                            <a href="details.php" class="btn btn-default">View Details</a>
+                            <a href="details.php" class="btn btn-primary">
+                                <i class="fa fa-shopping-cart"></i> Add to cart
+                            </a>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 col-sm-6 single">
+                <div class="product">
+                    <a href="details.php">
+                        <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                    </a>
+                    <div class="text">
+                        <h3><a href="details.php">BENETTON White Polo Shirt</a></h3>
+                        <p class="price">   INR 299</p>
+                        <p class="buttons">
+                            <a href="details.php" class="btn btn-default">View Details</a>
+                            <a href="details.php" class="btn btn-primary">
+                                <i class="fa fa-shopping-cart"></i> Add to cart
+                            </a>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 col-sm-6 single">
+                <div class="product">
+                    <a href="details.php">
+                        <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                    </a>
+                    <div class="text">
+                        <h3><a href="details.php">BENETTON White Polo Shirt</a></h3>
+                        <p class="price">   INR 299</p>
+                        <p class="buttons">
+                            <a href="details.php" class="btn btn-default">View Details</a>
+                            <a href="details.php" class="btn btn-primary">
+                                <i class="fa fa-shopping-cart"></i> Add to cart
+                            </a>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 col-sm-6 single">
+                <div class="product">
+                    <a href="details.php">
+                        <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                    </a>
+                    <div class="text">
+                        <h3><a href="details.php">BENETTON White Polo Shirt</a></h3>
+                        <p class="price">   INR 299</p>
+                        <p class="buttons">
+                            <a href="details.php" class="btn btn-default">View Details</a>
+                            <a href="details.php" class="btn btn-primary">
+                                <i class="fa fa-shopping-cart"></i> Add to cart
+                            </a>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 col-sm-6 single">
+                <div class="product">
+                    <a href="details.php">
+                        <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                    </a>
+                    <div class="text">
+                        <h3><a href="details.php">BENETTON White Polo Shirt</a></h3>
+                        <p class="price">   INR 299</p>
+                        <p class="buttons">
+                            <a href="details.php" class="btn btn-default">View Details</a>
+                            <a href="details.php" class="btn btn-primary">
+                                <i class="fa fa-shopping-cart"></i> Add to cart
+                            </a>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 col-sm-6 single">
+                <div class="product">
+                    <a href="details.php">
+                        <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                    </a>
+                    <div class="text">
+                        <h3><a href="details.php">BENETTON White Polo Shirt</a></h3>
+                        <p class="price">   INR 299</p>
+                        <p class="buttons">
+                            <a href="details.php" class="btn btn-default">View Details</a>
+                            <a href="details.php" class="btn btn-primary">
+                                <i class="fa fa-shopping-cart"></i> Add to cart
+                            </a>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 col-sm-6 single">
+                <div class="product">
+                    <a href="details.php">
+                        <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                    </a>
+                    <div class="text">
+                        <h3><a href="details.php">BENETTON White Polo Shirt</a></h3>
+                        <p class="price">   INR 299</p>
+                        <p class="buttons">
+                            <a href="details.php" class="btn btn-default">View Details</a>
+                            <a href="details.php" class="btn btn-primary">
+                                <i class="fa fa-shopping-cart"></i> Add to cart
+                            </a>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 col-sm-6 single">
+                <div class="product">
+                    <a href="details.php">
+                        <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                    </a>
+                    <div class="text">
+                        <h3><a href="details.php">BENETTON White Polo Shirt</a></h3>
+                        <p class="price">   INR 299</p>
+                        <p class="buttons">
+                            <a href="details.php" class="btn btn-default">View Details</a>
+                            <a href="details.php" class="btn btn-primary">
+                                <i class="fa fa-shopping-cart"></i> Add to cart
+                            </a>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <?php
+    include("includes/footer.php");
+    ?>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </body>
 </html>
