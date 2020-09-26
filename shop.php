@@ -125,7 +125,7 @@
         <div class="container">
             <div class="col-md-12">
                 <ul class="breadcrumb">
-                    <li><a href="home.php">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li>
                         Shop
                     </li>
