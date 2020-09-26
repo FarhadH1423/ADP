@@ -13,7 +13,7 @@
                 <h4>User Section</h4>
                 <ul>
                     <li><a href="checkout.php">Login</a></li>
-                    <li><a href="customer_registration.php">Login</a></li>
+                    <li><a href="customer_registration.php">Register</a></li>
                 </ul>
                 <hr class="hidden-md hidden-lg hidden-sm">
             </div>
@@ -36,8 +36,8 @@
                     <br>Dhaka
                     <br>Chittagong
                     <br>Khulna 
-                    <br>Rajshahi
-                    <br>Noakhali 
+                    <br>info@adp.com
+                    <br>01779002301 
                 </p>
                 <a href="contact.php">Go to contact us page</a>
                 <hr class="hidden-md hidden-lg">
@@ -55,7 +55,31 @@
                         </span>
                     </div>
                 </form>
+                <hr>
+                <h4>Stay In Touch</h4>
+                <p class="social">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                    <a href="#"><i class="fa fa-envelope"></i></a>
+                </p>
             </div>
+        </div>
+    </div>
+</div>
+
+<div id="copyright">
+    <div class="container">
+        <div class="col-md-6">
+            <p class="pull-left">
+                &copy; 2020 WTSolvers Ltd.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <p class="pull-right">
+                Templete By: <a href="www.wtsolvers.com">WTSolvers.com</a>
+            </p>
         </div>
     </div>
 </div>

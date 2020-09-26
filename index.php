@@ -438,7 +438,7 @@
             </div>
         </div>
     </div>
-
+    <hr>
     <!--Footer-->
     <?php
     include("includes/footer.php");
