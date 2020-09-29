@@ -1,3 +1,9 @@
+<?php
+include("includes/db.php");
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>  
@@ -131,18 +137,31 @@
                     <li data-target="myCarousel" data-slide-to="3" ></li>
                 </ol>
                 <div class="carousel-inner">
-                    <div class="item active">
-                        <img src="admin_area/slider_images/1.jpg" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="admin_area/slider_images/2.jpg" alt="">  
-                    </div>
-                    <div class="item">
-                        <img src="admin_area/slider_images/3.jpg" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="admin_area/slider_images/4.jpg" alt="">
-                    </div>
+                    <?php
+                        $get_slider ="select * from slider LIMIT 0,1";
+                        $run_slider =mysqli_query($con, $get_slider);
+                        while($row= mysqli_fetch_array($run_slider)){
+                            $slider_name=$row['slider_name'];
+                            $slider_image=$row['slider_image'];
+                            echo "<div class='item active'>
+                            <img src='admin_area/slider_images/$slider_image'>
+                            </div>";
+                        }
+                    ?>
+                    
+                    <?php
+                        $get_slider ="select * from slider LIMIT 1,3";
+                        $run_slider =mysqli_query($con, $get_slider);
+                        while($row= mysqli_fetch_array($run_slider)){
+                            $slider_name=$row['slider_name'];
+                            $slider_image=$row['slider_image'];
+                            echo "<div class='item'>
+                            <img src='admin_area/slider_images/$slider_image'>
+                            </div>";
+                        }
+                    ?>
+
+
                 </div>
 
                <a href="#myCarousel" class="left carousel-control" data-slide="prev">
