@@ -180,7 +180,121 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-sm-6">
+                        <div class="box">
+                            <h1 class="text-center">
+                                Tomato hit sessional Great color with no formalin
+                            </h1>
+                            <form action="details.php" method="post" class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label">Product Quality</label>
+                                    <div class="col-md-7">
+                                        <select name="product_qty" class="form-control">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label">Product Size</label>
+                                    <div class="col-md-7">
+                                        <select name="product_size" class="form-control">
+                                            <option>Select a size</option>
+                                            <option>Small</option>
+                                            <option>Medium</option>
+                                            <option>Large</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <p class="price">200 Taka</p>
+                                <p class="text-center buttons">
+                                    <button class="btn btn-primary" type="submit">
+                                        <i class="fa fa-shopping-cart"></i>Add to cart
+                                    </button>
+                                </p>
+                            </form>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="#" class="thumb">
+                                <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                            </a>
+                        </div>
+
+                        <div class="col-xs-4">
+                            <a href="#" class="thumb">
+                                <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                            </a>
+                        </div>
+
+                        <div class="col-xs-4">
+                            <a href="#" class="thumb">
+                                <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                            </a>
+                        </div>
+
+                    </div>
                 </div>
+                <div class="box" id="details">
+                    <h4>Product Details</h4>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <h4>Size</h4>
+                    <ul>
+                        <li>Small</li>
+                        <li>Medium</li>
+                        <li>Large</li>
+                    </ul>
+                </div>
+                <div id="row same-height-row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="box same-height headline">
+                            <h3 class="text-center">You are also Like These Products</h3>
+                        </div>
+                    </div>
+                    <div class="center-responsive col-md-3">
+                        <div class="product same-height">
+                            <a href="">
+                                <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                            </a>
+                            <div class="text">
+                                <h3><a href="details.php">Tomato hit sessional Great color with no formalin
+                            </a></h3>
+                            <p class="price"> 200 Taka </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="center-responsive col-md-3">
+                        <div class="product same-height">
+                            <a href="">
+                                <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                            </a>
+                            <div class="text">
+                                <h3><a href="details.php">Tomato hit sessional Great color with no formalin
+                            </a></h3>
+                            <p class="price"> 200 Taka </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="center-responsive col-md-3">
+                        <div class="product same-height">
+                            <a href="">
+                                <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                            </a>
+                            <div class="text">
+                                <h3><a href="details.php">Tomato hit sessional Great color with no formalin
+                            </a></h3>
+                            <p class="price"> 200 Taka </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
             </div>
 
 
