@@ -23,26 +23,26 @@
             <div class="col-md-6">
                 <ul class="menu">
                     <li>
-                    <a href="customer_registration.php"> Register </a>
+                    <a href="../customer_registration.php"> Register </a>
                     </li>
 
                     <li>
-                    <a href="checkout.php"> My Account </a>
+                    <a href="my_account.php"> My Account </a>
                     </li>
 
                     <li>
-                    <a href="cart.php"> Goto Cart </a>
+                    <a href="../cart.php"> Goto Cart </a>
                     </li>
 
                     <li>
-                    <a href="login.php"> Login </a>
+                    <a href="../login.php"> Login </a>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
     <!-- Top Bar end -->
-    <div class="navbar navbar-default">
+    <div class="navbar navbar-default"> 
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="index.php">
@@ -63,20 +63,20 @@
             <div class="navbar-collapse collapse" id="navigation">
                 <div class="padding-nav">
                     <ul class="nav navbar-nav navbar-left">
-                        <li  class="active">
-                            <a href="index.php">Home</a>
+                        <li >
+                            <a href="../index.php">Home</a>
                         </li>
                         
-                        <li >
-                            <a href="shop.php">Shop</a>
+                        <li>
+                            <a href="../shop.php">Shop</a>
                         </li>
 
-                        <li>
+                        <li  class="active">
                             <a href="my_account.php">My Account</a>
                         </li>
 
                         <li>
-                            <a href="cart.php">Shoping Cart</a>
+                            <a href="../cart.php">Shoping Cart</a>
                         </li>
 
                         <li>
@@ -84,11 +84,11 @@
                         </li>
 
                         <li>
-                            <a href="services.php">Services</a>
+                            <a href="../services.php">Services</a>
                         </li>
 
                         <li>
-                            <a href="contactus.php">Contact Us</a>
+                            <a href="../contactus.php">Contact Us</a>
                         </li>
                     </ul>
                 </div>
@@ -127,7 +127,7 @@
                 <ul class="breadcrumb">
                     <li><a href="index.php">Home</a></li>
                     <li>
-                        Registration
+                        My Account
                     </li>
                 </ul>
             </div>
@@ -136,63 +136,41 @@
                     include("includes/sidebar.php");
                 ?>
             </div>
+
             <div class="col-md-9">
-                <div class="box">
-                    <div class="box-header">
-                        <center>
-                            <h2>
-                                Customer Registration
-                            </h2>
-                            <p class="text-muted">If you have any questions, please feel free to contact us, our customer service center is working for 24/7</p>
-                        </center>
-                    </div>
-                    <form action="customer_registration.php" method="post" enctype="multipart/form-data">
-                        <div class="form-group">
-                            <label>Customer Name</label>
-                            <input type="text" name="c_name" required="" class=form-control>
-                        </div>
+                <?php
+                    if(isset($_GET['my_order'])){
+                        include("my_order.php");
+                    }
+                ?>
 
-                        <div class="form-group">
-                            <label>Customer Email</label>
-                            <input type="text" name="c_email" required="" class=form-control>
-                        </div>
+                <?php
+                    if(isset($_GET['pay_offline'])){
+                        include("pay_offline.php");
+                    }
+                ?>
 
-                        <div class="form-group">
-                            <label>Customer Password</label>
-                            <input type="password" name="c_password" required="" class=form-control>
-                        </div>
+                <?php
+                    if(isset($_GET['edit_act'])){
+                        include("edit_act.php");
+                    }
+                ?>
 
+                <?php
+                    if(isset($_GET['change_pass'])){
+                        include("change_pass.php");
+                    }
+                ?>
 
-                        <div class="form-group">
-                            <label>District</label>
-                            <input type="text" name="c_district" required="" class=form-control>
-                        </div>
+                <?php
+                    if(isset($_GET['delete_ac'])){
+                        include("delete_ac.php");
+                    }
+                ?>
 
-                        <div class="form-group">
-                            <label>Contact Number</label>
-                            <input type="text" name="c_number" required="" class=form-control>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Address</label>
-                            <input type="text" name="c_address" required="" class=form-control>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Image</label>
-                            <input type="file" name="c_image" required="" class=form-control>
-                        </div>
-
-
-                        <div class="text-center">
-                            <button type="submit" name="submit" class="btn btn-primary">
-                                <i class = "fa fa-user-md"></i>Register
-                            </button>
-                        </div>
-
-                    </form>
-                </div>
+                 
             </div>
+
 
             </div>
     </div>
