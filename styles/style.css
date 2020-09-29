@@ -309,6 +309,12 @@ body{
     height: 350px;
 }
 
+#content #cart .table tbody tr td img{
+    width: 50px;
+}
+
+
+
 /* Footer */
 #footer{
     background: #e0e0e0;

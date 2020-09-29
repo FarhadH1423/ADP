@@ -137,9 +137,150 @@
                         <h1>Shopping Cart</h1>
                         <p class="text-muted"> Currently you have 3 item(s) in your cart </p>
                         <div class="table-responsive">
-                            
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Product</th>
+                                        <th>Quantity</th>
+                                        <th>Unit Price</th>
+                                        <th>Size</th>
+                                        <th colspan="2">Delete</th>
+                                        <th colspan="2">Sub Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><img src="admin_area/product_images/product.jpg"></td>
+                                        <td>Tomato hit sessional Great color with no formalin</td>
+                                        <td>2</td>
+                                        <td>Taka 200</td>
+                                        <td>Medium</td>
+                                        <td><input type="checkbox" name="remove[]"></td>
+                                        <td>Taka 400</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><img src="admin_area/product_images/product.jpg"></td>
+                                        <td>Tomato hit sessional Great color with no formalin</td>
+                                        <td>2</td>
+                                        <td>Taka 100</td>
+                                        <td>Medium</td>
+                                        <td><input type="checkbox" name="remove[]"></td>
+                                        <td>Taka 200</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th colspan="5">Total</th>
+                                        <th colspan="2">Taka 390</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="box-footer">
+                            <div class="pull-left">
+                                <a href="index.php" class="btn btn-default">
+                                    <i class="fa fa-chevron-left"></i>Continue Shopping
+                                </a>
+                            </div>
+
+                            <div class="pull-right">
+                                <button class="btn btn-default" type="submit" name="update" value="Update Cart">
+                                <i class="fa fa-refresh">Update Cart</i>
+                                </button>
+
+                                <a href="checkout.php" class="btn btn-primary">
+                                    Procced to checkout <i class="fa fa-chevron-right"></i>
+                                </a>
+                                    
+                                
+                            </div>
                         </div>
                     </form>
+                </div>
+
+                <div id="row same-height-row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="box same-height headline">
+                            <h3 class="text-center">You are also Like These Products</h3>
+                        </div>
+                    </div>
+                    <div class="center-responsive col-md-3">
+                        <div class="product same-height">
+                            <a href="">
+                                <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                            </a>
+                            <div class="text">
+                                <h3><a href="details.php">Tomato hit sessional Great color with no formalin
+                            </a></h3>
+                            <p class="price"> 200 Taka </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="center-responsive col-md-3">
+                        <div class="product same-height">
+                            <a href="">
+                                <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                            </a>
+                            <div class="text">
+                                <h3><a href="details.php">Tomato hit sessional Great color with no formalin
+                            </a></h3>
+                            <p class="price"> 200 Taka </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="center-responsive col-md-3">
+                        <div class="product same-height">
+                            <a href="">
+                                <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                            </a>
+                            <div class="text">
+                                <h3><a href="details.php">Tomato hit sessional Great color with no formalin
+                            </a></h3>
+                            <p class="price"> 200 Taka </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+                <div class="box" id="order-summary">
+                    <div class="box-header">
+                        <h3>Order Summary</h3>
+                    </div>
+                    <p class="text-muted">
+                        Shipping and additional costs are calculated based on the values you have entered
+                    </p>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>Order Subtotal</td>
+                                    <td>Taka 120</td>
+                                </tr>
+                                <tr>
+                                    <td>Shipping and Handling</td>
+                                    <td>Taka 20</td>
+                                </tr>
+                                <tr>
+                                    <td>Tax</td>
+                                    <td>Taka 0</td>
+                                </tr>
+
+                                <tr class="total">
+                                    <td>Total</td>
+                                    <td>Taka 140</td>
+                                </tr>
+                              
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
