@@ -3,6 +3,27 @@ include("includes/db.php");
 include("functions/functions.php"); 
 ?>
 
+<?php
+    if(isset($_GET['pro_id'])){
+        $pro_id=$_GET['pro_id'];
+        $get_product="select * from products where product_id='$pro_id'";
+        $run_product=mysqli_query($con, $get_product);
+        $row_product=mysqli_fetch_array($run_product);
+        $p_cat_id=$row_product['p_cat_id'];
+        $p_title=$row_product['product_title'];
+        $p_price=$row_product['product_price'];
+        $p_desc=$row_product['product_desc'];
+        $p_img1=$row_product['product_img1'];
+        $p_img2=$row_product['product_img2'];
+        $p_img3=$row_product['product_img3'];
+        $get_p_cat="select * from product_categories where p_cat_id='$p_cat_id'";
+        $run_p_cat=mysqli_query($con, $get_p_cat);
+        $row_p_cat=mysqli_fetch_array($run_p_cat);
+        $p_cat_id=$row_p_cat['p_cat_id'];
+        $p_cat_title=$row_p_cat['p_cat_title'];
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>  
@@ -134,6 +155,10 @@ include("functions/functions.php");
                     <li>
                         Shop
                     </li>
+                    <li>
+                    <a href="shop.php?p_cat=<?php echo $p_cat_id;?>"> <?php echo $p_cat_title ?> </a>
+                    </li>
+                    <li> <?php echo $p_title ?> </li>
                 </ul>
             </div>
             <div class="col-md-3">
@@ -155,19 +180,19 @@ include("functions/functions.php");
                                 <div class="carousel-inner">
                                     <div class="item active">
                                         <center>
-                                            <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                                            <img src="admin_area/product_images/<?php echo $p_img1 ?>" class="img-responsive">
                                         </center>
                                     </div>
 
                                     <div class="item">
                                         <center>
-                                            <img src="admin_area/product_images/product2.jpg" class="img-responsive">
+                                            <img src="admin_area/product_images/<?php echo $p_img2 ?>" class="img-responsive">
                                         </center>
                                     </div>
 
                                     <div class="item">
                                         <center>
-                                            <img src="admin_area/product_images/product3.jpg" class="img-responsive">
+                                            <img src="admin_area/product_images/<?php echo $p_img3 ?>" class="img-responsive">
                                         </center>
                                     </div>
                                 </div>
@@ -188,9 +213,9 @@ include("functions/functions.php");
                     <div class="col-sm-6">
                         <div class="box">
                             <h1 class="text-center">
-                                Tomato hit sessional Great color with no formalin
+                            <?php echo $p_title ?>
                             </h1>
-                            <form action="details.php" method="post" class="form-horizontal">
+                            <form action="index.php?add_cart=<?php echo $pro_id ?>" method="post" class="form-horizontal">
                                 <div class="form-group">
                                     <label class="col-md-5 control-label">Product Quality</label>
                                     <div class="col-md-7">
@@ -214,7 +239,7 @@ include("functions/functions.php");
                                         </select>
                                     </div>
                                 </div>
-                                <p class="price">200 Taka</p>
+                                <p class="price">Taka <?php echo $p_price ?></p>
                                 <p class="text-center buttons">
                                     <button class="btn btn-primary" type="submit">
                                         <i class="fa fa-shopping-cart"></i>Add to cart
@@ -224,19 +249,19 @@ include("functions/functions.php");
                         </div>
                         <div class="col-xs-4">
                             <a href="#" class="thumb">
-                                <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                                <img src="admin_area/product_images/<?php echo $p_img1 ?>" class="img-responsive">
                             </a>
                         </div>
 
                         <div class="col-xs-4">
                             <a href="#" class="thumb">
-                                <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                                <img src="admin_area/product_images/<?php echo $p_img2 ?>" class="img-responsive">
                             </a>
                         </div>
 
                         <div class="col-xs-4">
                             <a href="#" class="thumb">
-                                <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                                <img src="admin_area/product_images/<?php echo $p_img3 ?>" class="img-responsive">
                             </a>
                         </div>
 
@@ -244,7 +269,7 @@ include("functions/functions.php");
                 </div>
                 <div class="box" id="details">
                     <h4>Product Details</h4>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p><?php echo $p_desc ?></p>
                     <h4>Size</h4>
                     <ul>
                         <li>Small</li>

@@ -25,7 +25,7 @@ include("functions/functions.php");
                     Welcome Guest
                 </a>
 
-                <a href="#">Shopping Cart Total Price: INR 100, Total Items 2</a>
+                <a href="#">Shopping Cart Total Price: Taka 100, Total Items 2</a>
             </div>
             <div class="col-md-6">
                 <ul class="menu">
