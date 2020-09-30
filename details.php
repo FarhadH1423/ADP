@@ -44,7 +44,7 @@ include("functions/functions.php");
                     Welcome Guest
                 </a>
 
-                <a href="#">Shopping Cart Total Price: INR 100, Total Items 2</a>
+                <a href="#">Shopping Cart Total Price: Taka <?php totalPrice(); ?>, Total Items <?php item(); ?></a>
             </div>
             <div class="col-md-6">
                 <ul class="menu">
@@ -120,7 +120,7 @@ include("functions/functions.php");
                 </div>
                     <a href="cart.php" class="btn btn-primary navbar-btn right">
                         <i class="fa fa-shopping-cart"></i>
-                        <span>4 items In Cart</span>
+                        <span><?php item(); ?> items In Cart</span>
                     </a>
 
 
@@ -156,9 +156,9 @@ include("functions/functions.php");
                         Shop
                     </li>
                     <li>
-                    <a href="shop.php?p_cat=<?php echo $p_cat_id;?>"> <?php echo $p_cat_title ?> </a>
+                    <a href="shop.php?p_cat=<?php echo $p_cat_id;?>"> <?php echo $p_cat_title; ?> </a>
                     </li>
-                    <li> <?php echo $p_title ?> </li>
+                    <li> <?php echo $p_title; ?> </li>
                 </ul>
             </div>
             <div class="col-md-3">
@@ -215,7 +215,10 @@ include("functions/functions.php");
                             <h1 class="text-center">
                             <?php echo $p_title ?>
                             </h1>
-                            <form action="index.php?add_cart=<?php echo $pro_id ?>" method="post" class="form-horizontal">
+                            <?php
+                                addCart();
+                            ?>
+                            <form action="details.php?add_cart=<?php echo $pro_id ?>" method="post" class="form-horizontal">
                                 <div class="form-group">
                                     <label class="col-md-5 control-label">Product Quality</label>
                                     <div class="col-md-7">
@@ -283,46 +286,31 @@ include("functions/functions.php");
                             <h3 class="text-center">You are also Like These Products</h3>
                         </div>
                     </div>
-                    <div class="center-responsive col-md-3">
-                        <div class="product same-height">
-                            <a href="">
-                                <img src="admin_area/product_images/product.jpg" class="img-responsive">
-                            </a>
-                            <div class="text">
-                                <h3><a href="details.php">Tomato hit sessional Great color with no formalin
-                            </a></h3>
-                            <p class="price"> 200 Taka </p>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                        $get_product="select * from products order by 1 LIMIT 0,3";
+                        $run_product=mysqli_query($con,$get_product);
+                        while($row=mysqli_fetch_array($run_product)){
+                            $pro_id=$row['product_id'];
+                            $product_title=$row['product_title'];
+                            $product_price=$row['product_price'];
+                            $product_img1=$row['product_img1'];
 
-                    <div class="center-responsive col-md-3">
-                        <div class="product same-height">
-                            <a href="">
-                                <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                            echo"
+                            <div class='center-responsive col-md-3 col-sm-6'>
+                            <div class='product same-height'>
+                            <a href='details.php?pro_id=$pro_id'>
+                            <img src='admin_area/product_images/$product_img1' class='img-responsive'>
                             </a>
-                            <div class="text">
-                                <h3><a href="details.php">Tomato hit sessional Great color with no formalin
-                            </a></h3>
-                            <p class="price"> 200 Taka </p>
+                            <div class='text'>
+                                <h3><a href='details.php?pro_id=$pro_id'>$product_title</a></h3>
+                                <p class='price'>$product_price</p>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="center-responsive col-md-3">
-                        <div class="product same-height">
-                            <a href="">
-                                <img src="admin_area/product_images/product.jpg" class="img-responsive">
-                            </a>
-                            <div class="text">
-                                <h3><a href="details.php">Tomato hit sessional Great color with no formalin
-                            </a></h3>
-                            <p class="price"> 200 Taka </p>
                             </div>
-                        </div>
-                    </div>
+                            </div>
+                            ";
+                        }
+                    ?>
 
-                    
                 </div>
 
             </div>

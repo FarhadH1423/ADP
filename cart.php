@@ -23,7 +23,7 @@ include("functions/functions.php");
                     Welcome Guest
                 </a>
 
-                <a href="#">Shopping Cart Total Price: INR 100, Total Items 2</a>
+                <a href="#">Shopping Cart Total Price: Taka <?php totalPrice(); ?>, Total Items <?php item(); ?></a>
             </div>
             <div class="col-md-6">
                 <ul class="menu">
@@ -99,7 +99,7 @@ include("functions/functions.php");
                 </div>
                     <a href="cart.php" class="btn btn-primary navbar-btn right">
                         <i class="fa fa-shopping-cart"></i>
-                        <span>4 items In Cart</span>
+                        <span><?php item(); ?> items In Cart</span>
                     </a>
 
 
@@ -139,8 +139,18 @@ include("functions/functions.php");
             <div class="col-md-9" id="cart">
                 <div class="box">
                     <form action="cart.php" method="post" enctype="multipart-form-data">
+
                         <h1>Shopping Cart</h1>
-                        <p class="text-muted"> Currently you have 3 item(s) in your cart </p>
+
+                        <?php
+                            $ip_add=getUserIP();
+                            $select_cart="select * from cart where ip_add='$ip_add'";
+                            $run_cart=mysqli_query($con,$select_cart);
+                            $count=mysqli_num_rows($run_cart);
+                        ?>
+
+                        <p class="text-muted"> Currently you have <?php echo $count ?>item(s) in your cart </p>
+
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
@@ -154,34 +164,52 @@ include("functions/functions.php");
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td><img src="admin_area/product_images/product.jpg"></td>
-                                        <td>Tomato hit sessional Great color with no formalin</td>
-                                        <td>2</td>
-                                        <td>Taka 200</td>
-                                        <td>Medium</td>
-                                        <td><input type="checkbox" name="remove[]"></td>
-                                        <td>Taka 400</td>
-                                    </tr>
+                                <?php
+                                $total=0;
+                                while($row=mysqli_fetch_array($run_cart)){
+                                    $pro_id=$row['p_id'];
+                                    $pro_size=$row['size'];
+                                    $pro_qty=$row['qty'];
+                                    $get_product="select * from products where product_id='$pro_id'";
+                                    $run_pro=mysqli_query($con,$get_product);
+
+                                    while($row=mysqli_fetch_array($run_pro)){
+                                        $p_title=$row['product_title'];
+                                        $p_img1=$row['product_img1'];
+                                        $p_price=$row['product_price'];
+                                        $sub_total=$row['product_price']*$pro_qty; 
+                                        $total +=$sub_total;
+                                ?>
+                                    
 
                                     <tr>
-                                        <td><img src="admin_area/product_images/product.jpg"></td>
-                                        <td>Tomato hit sessional Great color with no formalin</td>
-                                        <td>2</td>
-                                        <td>Taka 100</td>
-                                        <td>Medium</td>
-                                        <td><input type="checkbox" name="remove[]"></td>
-                                        <td>Taka 200</td>
+                                        <td><img src="admin_area/product_images/<?php echo $p_img1 ?>"></td>
+                                        <td><?php echo $p_img1 ?></td>
+                                        <td><?php echo $pro_qty ?></td>
+                                        <td><?php echo $p_price ?></td>
+                                        <td><?php echo $pro_size ?></td>
+                                        <td><input type="checkbox" name="remove[]" value="<?php echo $pro_id ?>"></td>
+                                        <td><?php echo $sub_total ?></td> 
                                     </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th colspan="5">Total</th>
-                                        <th colspan="2">Taka 390</th>
-                                    </tr>
+                                    <?php }} ?>
                                 </tfoot>
                             </table>
                         </div>
+                        
+                        
+                        <div class="box-footer">
+                            <div class="pull-left">
+                             <h4>Total Price</h4>   
+                            </div>
+
+                            <div class="pull-right">
+                               
+                            <h4> <?php echo $total ?> Taka </h4>
+                                
+                            </div>
+                        </div>
+                        
+                        
                         <div class="box-footer">
                             <div class="pull-left">
                                 <a href="index.php" class="btn btn-default">
@@ -231,7 +259,7 @@ include("functions/functions.php");
                             <div class="text">
                                 <h3><a href="details.php">Tomato hit sessional Great color with no formalin
                             </a></h3>
-                            <p class="price"> 200 Taka </p>
+                            <p class="price"> <?php echo $total ?> </p>
                             </div>
                         </div>
                     </div>

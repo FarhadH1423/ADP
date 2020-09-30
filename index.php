@@ -25,7 +25,7 @@ include("functions/functions.php");
                     Welcome Guest
                 </a>
 
-                <a href="#">Shopping Cart Total Price: Taka 100, Total Items 2</a>
+                <a href="#">Shopping Cart Total Price: Taka <?php totalPrice(); ?>, Total Items <?php item(); ?> </a>
             </div>
             <div class="col-md-6">
                 <ul class="menu">
@@ -101,7 +101,7 @@ include("functions/functions.php");
                 </div>
                     <a href="cart.php" class="btn btn-primary navbar-btn right">
                         <i class="fa fa-shopping-cart"></i>
-                        <span>4 items In Cart</span>
+                        <span><?php item(); ?> items In Cart</span>
                     </a>
 
 
