@@ -232,6 +232,22 @@ include("functions/functions.php");
                     </form>
                 </div>
 
+                <?php
+                function update_cart(){
+                    global $con;
+                    if(isset($_POST['update'])){
+                        foreach($_POST['remove'] as $remove_id){
+                            $delete_product="delete from cart where p_id='$remove_id'";
+                            $run_del=mysqli_query($con,$delete_product);
+                            if($run_del){
+                                echo"<script>window.open('cart.php','_self')</script>";
+                            }
+                        }
+                    }
+                }
+                echo @$up_cart=update_cart();
+                ?>
+
                 <div id="row same-height-row">
                     <div class="col-md-3 col-sm-6">
                         <div class="box same-height headline">
@@ -295,20 +311,20 @@ include("functions/functions.php");
                             <tbody>
                                 <tr>
                                     <td>Order Subtotal</td>
-                                    <td>Taka 120</td>
+                                    <td><?php echo $total ?></td>
                                 </tr>
                                 <tr>
                                     <td>Shipping and Handling</td>
-                                    <td>Taka 20</td>
+                                    <td>Taka 00</td>
                                 </tr>
                                 <tr>
                                     <td>Tax</td>
-                                    <td>Taka 0</td>
+                                    <td>Taka 00</td>
                                 </tr>
 
                                 <tr class="total">
                                     <td>Total</td>
-                                    <td>Taka 140</td>
+                                    <td><?php echo $total ?></td>
                                 </tr>
                               
                             </tbody>
