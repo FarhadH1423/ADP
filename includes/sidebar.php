@@ -4,11 +4,9 @@
     </div>
     <div class="panel-body">
         <ul class="nav nav-pills nav-stacked category-menu">
-            <li><a href="shop.php">Rice</a></li>
-            <li><a href="shop.php">Onion</a></li>
-            <li><a href="shop.php">Potato</a></li>
-            <li><a href="shop.php">Tomato</a></li>
-            <li><a href="shop.php">Fish</a></li>
+            <?php
+                getPCats();
+            ?>
         </ul>
     </div>
 </div>
@@ -19,8 +17,9 @@
     </div>
     <div class="panel-body">
         <ul class="nav nav-pills nav-stacked category-menu">
-            <li><a href="shop.php">Seasonal</a></li>
-            <li><a href="shop.php">Non seasonal</a></li>
+        <?php
+                getCat();
+            ?>
         
             
         </ul>

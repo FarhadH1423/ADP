@@ -1,6 +1,6 @@
 <?php
 include("includes/db.php");
-include("admin_area/functions/functions.php");
+include("functions/functions.php");
 ?>
 
 
