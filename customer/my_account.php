@@ -1,4 +1,9 @@
 <?php
+session_start();
+if(!isset($_SESSION['customer_email'])){
+    echo "<script>window.open('../checkout.php','_self')</script>";
+}else{
+
 include("includes/db.php");
 include("functions/functions.php");
 ?>
@@ -50,7 +55,7 @@ include("functions/functions.php");
     <div class="navbar navbar-default"> 
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand home" href="index.php">
+                <a class="navbar-brand home" href="../index.php">
                     <img src="images/logo.png" alt="logo" class="hidden-xs">
                     <img src="images/logo-small.jpg" alt="logo" class="visible-xs">
                 </a>
@@ -84,13 +89,6 @@ include("functions/functions.php");
                             <a href="../cart.php">Shoping Cart</a>
                         </li>
 
-                        <li>
-                            <a href="about.php">About Us</a>
-                        </li>
-
-                        <li>
-                            <a href="../services.php">Services</a>
-                        </li>
 
                         <li>
                             <a href="../contactus.php">Contact Us</a>
@@ -191,3 +189,5 @@ include("functions/functions.php");
 
 </body>
 </html>
+
+                <?php } ?>

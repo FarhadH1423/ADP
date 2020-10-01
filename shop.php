@@ -41,7 +41,13 @@ include("functions/functions.php");
                     </li>
 
                     <li>
-                    <a href="checkout.php"> My Account </a>
+                    <?php
+                            if(!isset($_SESSION['customer_email'])){
+                                echo"<a href='checkout.php'>My Account</a>";
+                            }else{
+                                echo"<a href='customer/my_account.php?my_order'>My Account</a>";
+                            }
+                        ?>
                     </li>
 
                     <li>
@@ -49,7 +55,13 @@ include("functions/functions.php");
                     </li>
 
                     <li>
-                    <a href="login.php"> Login </a>
+                    <?php
+                            if(!isset($_SESSION['customer_email'])){
+                                echo"<a href='checkout.php'>Login</a>";
+                            }else{
+                                echo"<a href='logout.php'>Logout</a>";
+                            }
+                        ?>
                     </li>
                 </ul>
             </div>
@@ -86,20 +98,20 @@ include("functions/functions.php");
                         </li>
 
                         <li>
-                            <a href="checkout.php">My Account</a>
+                        <?php
+                            if(!isset($_SESSION['customer_email'])){
+                                echo"<a href='checkout.php'>My Account</a>";
+                            }else{
+                                echo"<a href='customer/my_account.php?my_order'>My Account</a>";
+                            }
+                        ?>
                         </li>
 
                         <li>
                             <a href="cart.php">Shoping Cart</a>
                         </li>
 
-                        <li>
-                            <a href="about.php">About Us</a>
-                        </li>
-
-                        <li>
-                            <a href="services.php">Services</a>
-                        </li>
+                       
 
                         <li>
                             <a href="contactus.php">Contact Us</a>

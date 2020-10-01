@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("includes/db.php");
 include("functions/functions.php"); 
 ?>
@@ -41,7 +42,14 @@ include("functions/functions.php");
         <div class="container">
             <div class="col-md-6 offer">
                 <a href="#" class="btn btn-success btn-sm">
-                    Welcome Guest
+                <?php
+                        if(!isset($_SESSION['customer_email'])){
+                            echo"Welcome Guest";
+                        }
+                        else{
+                            echo"Welcome: ".$_SESSION['customer_email']."";
+                        }
+                    ?>
                 </a>
 
                 <a href="#">Shopping Cart Total Price: Taka <?php totalPrice(); ?>, Total Items <?php item(); ?></a>
@@ -53,7 +61,13 @@ include("functions/functions.php");
                     </li>
 
                     <li>
-                    <a href="checkout.php"> My Account </a>
+                    <?php
+                            if(!isset($_SESSION['customer_email'])){
+                                echo"<a href='checkout.php'>My Account</a>";
+                            }else{
+                                echo"<a href='customer/my_account.php?my_order'>My Account</a>";
+                            }
+                        ?>
                     </li>
 
                     <li>
@@ -61,7 +75,13 @@ include("functions/functions.php");
                     </li>
 
                     <li>
-                    <a href="login.php"> Login </a>
+                    <?php
+                            if(!isset($_SESSION['customer_email'])){
+                                echo"<a href='checkout.php'>Login</a>";
+                            }else{
+                                echo"<a href='logout.php'>Logout</a>";
+                            }
+                        ?>
                     </li>
                 </ul>
             </div>
@@ -98,20 +118,20 @@ include("functions/functions.php");
                         </li>
 
                         <li>
-                            <a href="checkout.php">My Account</a>
+                        <?php
+                            if(!isset($_SESSION['customer_email'])){
+                                echo"<a href='checkout.php'>My Account</a>";
+                            }else{
+                                echo"<a href='customer/my_account.php?my_order'>My Account</a>";
+                            }
+                        ?>
                         </li>
 
                         <li>
                             <a href="cart.php">Shoping Cart</a>
                         </li>
 
-                        <li>
-                            <a href="about.php">About Us</a>
-                        </li>
-
-                        <li>
-                            <a href="services.php">Services</a>
-                        </li>
+                        
 
                         <li>
                             <a href="contactus.php">Contact Us</a>
