@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("includes/db.php");
 include("functions/functions.php");
 ?>
@@ -20,7 +21,14 @@ include("functions/functions.php");
         <div class="container">
             <div class="col-md-6 offer">
                 <a href="#" class="btn btn-success btn-sm">
-                    Welcome Guest
+                <?php
+                        if(!isset($_SESSION['customer_email'])){
+                            echo"Welcome Guest";
+                        }
+                        else{
+                            echo"Welcome: ".$_SESSION['customer_email']."";
+                        }
+                    ?>
                 </a>
 
                 <a href="#">Shopping Cart Total Price: INR 100, Total Items 2</a>

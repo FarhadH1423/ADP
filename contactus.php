@@ -164,7 +164,7 @@ include("functions/functions.php");
 
                         <div class="form-group">
                             <label>Subject</label>
-                            <input type="text" name="submit" required="" class=form-control>
+                            <input type="text" name="subject" required="" class=form-control>
                         </div>
 
                         <div class="form-group">
@@ -196,3 +196,24 @@ include("functions/functions.php");
 
 </body>
 </html>
+
+<?php
+    //Admin Mail
+    if(isset($_POST['submit'])){
+        $senderName=$_POST['name'];
+        $senderEmail=$_POST['email'];
+        $senderSubject=$_POST['subject'];
+        $senderMessage=$_POST['message'];
+        $receiverEmail="farhadwts@gmail.com";
+
+        mail($receiverEmail,$senderName,$senderSubject,$senderMessage,$senderEmail);
+        
+        //Customer Mail
+        $email=$_POST['email'];
+        $subject="Welcome to our website";
+        $msg="I shall get you soon, thanks for sending email";
+        $from="farhadwts@gmail.com";
+        mail($email,$subject,$msg,$from);
+        echo"<h2 align='center'>Your mail sent</h2>";
+    }
+?>
