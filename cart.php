@@ -115,6 +115,10 @@ include("functions/functions.php");
                         <li>
                             <a href="contactus.php">Contact Us</a>
                         </li>
+
+                        <li>
+                            <a href="aboutus.php">About Us</a>
+                        </li>
                     </ul>
                 </div>
                     <a href="cart.php" class="btn btn-primary navbar-btn right">
@@ -295,7 +299,7 @@ include("functions/functions.php");
                             <div class="text">
                                 <h3><a href="details.php">Tomato hit sessional Great color with no formalin
                             </a></h3>
-                            <p class="price"> <?php echo $total ?> </p>
+                            <p class="price"> 300 <?php echo $total ?> </p>
                             </div>
                         </div>
                     </div>

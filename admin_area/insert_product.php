@@ -1,5 +1,9 @@
 <?php
-include("includes/db.php");
+
+
+if(!isset($_SESSION['admin_email'])){
+	echo "<script>window.open('login.php','_self')</script>";
+}else{
 
 ?>
 
@@ -9,14 +13,8 @@ include("includes/db.php");
     
     <title>Insert Product</title>
 
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
   <script>tinymce.init({selector:'textarea'});</script>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
 </head>
 <body>
 <div class="row">
@@ -124,7 +122,6 @@ include("includes/db.php");
 </div>
 
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
 </body>
 </html>
 
@@ -156,7 +153,8 @@ include("includes/db.php");
 
         if($run_products){
             echo" <script>alert('Product Inserted Sucessfully')</script> ";
-            echo" <script>window.open('insert_product.php')</script> ";
+            echo" <script>window.open('index.php?view_product')</script> ";
         }
     }
 ?>
+<?php }  ?>

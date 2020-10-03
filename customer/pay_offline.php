@@ -11,19 +11,19 @@
     <table class="table table-bordered table-hover table-striped">
         <thead>
             <tr>
-                <th>Bank Account Details</th>
-                <th>Paypal Id</th>
-                <th>Link</th>
-                <th>Bkash number</th>
+                <th>Bkash</th>
+                <th>Nagad</th>
+                <th>Rocket</th>
+                <th>Ecash</th>
 
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>234567898</td>
-                <td>ADP@gmail.com</td>
-                <td>xxxxxxxxx</td>
-                <td>99999999</td>
+                <td>01779002301</td>
+                <td>01779002301</td>
+                <td>01779002301</td>
+                <td>01779002301</td>
 
             </tr>
         </tbody>

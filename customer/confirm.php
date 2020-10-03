@@ -116,6 +116,10 @@ if(isset($_GET['order_id'])){
                         <li>
                             <a href="../contactus.php">Contact Us</a>
                         </li>
+
+                        <li>
+                            <a href="../aboutus.php">About Us</a>
+                        </li>
                     </ul>
                 </div>
                     <a href="cart.php" class="btn btn-primary navbar-btn right">

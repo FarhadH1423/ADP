@@ -64,6 +64,10 @@ include("functions/functions.php");
                             }
                         ?>
                     </li>
+
+                    <li>
+                    <a href="admin_area/login.php">Admin</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -115,6 +119,10 @@ include("functions/functions.php");
 
                         <li>
                             <a href="contactus.php">Contact Us</a>
+                        </li>
+
+                        <li>
+                            <a href="aboutus.php">About Us</a>
                         </li>
                     </ul>
                 </div>

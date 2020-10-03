@@ -25,7 +25,8 @@ include("functions/functions.php");
         while($row_pro=mysqli_fetch_array($run_pro)){
             $sub_total=$row_pro['product_price'] * $qty;
 
-            $insert_cust="insert into customer_order (customer_id,due_amount,invoice_no,qty,size,order_date,order_status) values('$customer_id','$sub_total','$invoice_no','$qty','$size',NOW(),'$status')";
+            $insert_cust="insert into customer_order (customer_id,product_id,due_amount,invoice_no,qty,size,order_date,order_status) 
+            values('$customer_id','$pro_id','$sub_total','$invoice_no','$qty','$size',NOW(),'$status')";
             $run_cust=mysqli_query($con,$insert_cust);
 
             // $insert_pending_order="insert into pending_order(customer_id,invoice_no,product_id,qty,size,order_status) values('$customer_id','$invoice_no','$pro_id','$qty','$size','$status') ";

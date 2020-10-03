@@ -25,10 +25,10 @@ include("functions/functions.php");
         <div class="container">
             <div class="col-md-6 offer">
                 <a href="#" class="btn btn-success btn-sm">
-                    Welcome Guest
+                    Welcome Customer
                 </a>
 
-                <a href="#">Shopping Cart Total Price: INR 100, Total Items 2</a>
+                <a href="#"> </a>
             </div>
             <div class="col-md-6">
                 <ul class="menu">
@@ -45,7 +45,13 @@ include("functions/functions.php");
                     </li>
 
                     <li>
-                    <a href="../login.php"> Login </a>
+                    <?php
+                            if(!isset($_SESSION['customer_email'])){
+                                echo"<a href='checkout.php'>Login</a>";
+                            }else{
+                                echo"<a href='logout.php'>Logout</a>";
+                            }
+                        ?>
                     </li>
                 </ul>
             </div>
@@ -93,11 +99,15 @@ include("functions/functions.php");
                         <li>
                             <a href="../contactus.php">Contact Us</a>
                         </li>
+
+                        <li>
+                            <a href="../aboutus.php">About Us</a>
+                        </li>
                     </ul>
                 </div>
                     <a href="cart.php" class="btn btn-primary navbar-btn right">
                         <i class="fa fa-shopping-cart"></i>
-                        <span>4 items In Cart</span>
+                        <span></span>
                     </a>
 
 

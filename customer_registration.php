@@ -32,7 +32,7 @@ include("functions/functions.php");
                     ?>
                 </a>
 
-                <a href="#">Shopping Cart Total Price: Taka <?php totalPrice(); ?>, Total Items 2</a>
+                <a href="#">Shopping Cart Total Price: Taka <?php totalPrice(); ?>, Total Items <?php item(); ?></a>
             </div>
             <div class="col-md-6">
                 <ul class="menu">
@@ -110,11 +110,15 @@ include("functions/functions.php");
                         <li>
                             <a href="contactus.php">Contact Us</a>
                         </li>
+
+                        <li>
+                            <a href="aboutus.php">About Us</a>
+                        </li>
                     </ul>
                 </div>
                     <a href="cart.php" class="btn btn-primary navbar-btn right">
                         <i class="fa fa-shopping-cart"></i>
-                        <span>4 items In Cart</span>
+                        <span><?php item(); ?> items In Cart</span>
                     </a>
 
 
