@@ -107,7 +107,7 @@ include("functions/functions.php");
                         </li>
 
                         <li class="active">
-                            <a href="cart.php">Shoping Cart</a>
+                            <a href="cart.php">Shopping Cart</a>
                         </li>
 
                         
@@ -286,7 +286,7 @@ include("functions/functions.php");
                             <div class="text">
                                 <h3><a href="details.php">Tomato hit sessional Great color with no formalin
                             </a></h3>
-                            <p class="price"> 200 Taka </p>
+                            <p class="price"> 20 Taka </p>
                             </div>
                         </div>
                     </div>
@@ -294,12 +294,12 @@ include("functions/functions.php");
                     <div class="center-responsive col-md-3">
                         <div class="product same-height">
                             <a href="">
-                                <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                                <img src="admin_area/product_images/product2.jpg" class="img-responsive">
                             </a>
                             <div class="text">
                                 <h3><a href="details.php">Tomato hit sessional Great color with no formalin
                             </a></h3>
-                            <p class="price"> 300 <?php echo $total ?> </p>
+                            <p class="price"> 130 Taka<?php echo $total ?> </p>
                             </div>
                         </div>
                     </div>
@@ -307,12 +307,12 @@ include("functions/functions.php");
                     <div class="center-responsive col-md-3">
                         <div class="product same-height">
                             <a href="">
-                                <img src="admin_area/product_images/product.jpg" class="img-responsive">
+                                <img src="admin_area/product_images/product3.jpg" class="img-responsive">
                             </a>
                             <div class="text">
                                 <h3><a href="details.php">Tomato hit sessional Great color with no formalin
                             </a></h3>
-                            <p class="price"> 200 Taka </p>
+                            <p class="price"> 40 Taka </p>
                             </div>
                         </div>
                     </div>

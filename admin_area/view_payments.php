@@ -106,7 +106,7 @@ $i++;
 
 <td bgcolor="yellow" ><?php echo $invoice_no; ?></td>
 
-<td>INR <?php echo $amount; ?></td>
+<td>Taka <?php echo $amount; ?></td>
 
 <td><?php echo $payment_mode; ?></td>
 

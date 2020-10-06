@@ -92,7 +92,7 @@ include("functions/functions.php");
                         </li>
 
                         <li>
-                            <a href="../cart.php">Shoping Cart</a>
+                            <a href="../cart.php">Shopping Cart</a>
                         </li>
 
 

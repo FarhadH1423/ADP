@@ -144,7 +144,7 @@ echo $customer_email;
 
 <td><?php echo $order_date; ?> </td>
 
-<td>INR <?php echo $due_amount; ?></td>
+<td>Taka <?php echo $due_amount; ?></td>
 
 <td>
 <?php
